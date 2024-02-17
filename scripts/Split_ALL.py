@@ -1,4 +1,5 @@
 # This script opens ALL.TXT and copies entries into files named ALL_YYMM.txt in the same directory
+# Additionally, if you edit myCall below, the script will create ALL_me.txt with only entries containing your callsign.
 # It is left to the user to decide how to manage the resulting files.
 # You may wish to delete the existing ALL.TXT after the script has run, and replace it by renaming the latest ALL_YYMM.txt file to ALL.TXT
 # This way you won't create duplicate entries when you run the script again
@@ -11,22 +12,17 @@
 #
 # USE AT YOUR OWN RISK & BACK UP important files FIRST
 
-
-
-
-
-
-
 import os
 
 path=r"C:\Users\drala\AppData\Local\WSJT-X"
+myCall="G1OJS"
 
 fi = open(path + "\\ALL.TXT" , "r")
 fo_me = open(path + "\\ALL_me.TXT" , "a")
 
 mth=""
 for line in fi:
-	if("G1OJS" in line): fo_me.write(line)
+	if(myCall in line): fo_me.write(line)
 
 	if(line[0:4]!=mth):
 		mth=line[0:4]
