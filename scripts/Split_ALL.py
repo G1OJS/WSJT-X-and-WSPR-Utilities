@@ -25,15 +25,14 @@ mth=""
 for line in fi:
 	if(myCall in line): fo_me.write(line)
 
-	if(line[0:4]!=mth):
+	if(line[0:4]!=mth and line[0:4].isnumeric()):
 		mth=line[0:4]
 		try: 
 			fo.close() 
 		except Exception: 
 			pass
-		if mth.isnumeric(): fo = open(path + "\\ALL_" + mth + ".txt" , "w")
-	else:
-		fo.write(line)
+		fo = open(path + "\\ALL_" + mth + ".txt" , "w")
+	fo.write(line)
 
 fi.close()
-		
+	
