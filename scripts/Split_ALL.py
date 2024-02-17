@@ -3,6 +3,7 @@
 # It is left to the user to decide how to manage the resulting files.
 # You may wish to delete the existing ALL.TXT after the script has run, and replace it by renaming the latest ALL_YYMM.txt file to ALL.TXT
 # This way you won't create duplicate entries when you run the script again
+# If you leave the ALL_me.txt file where it is, it will be appended next time you run the script
 # Tip - don't do this whilst WSJT-X is running as it will recreate the ALL.TXT file as soon as you delete it
 #
 # TO RUN:
